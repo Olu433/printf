@@ -60,7 +60,7 @@ int print_bin(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int _unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_oct(va_list types, char buffer[],
+int _octal(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int _hexadecimal(va_list types, char buffer[],
 	int flags, int width, int precision, int size);

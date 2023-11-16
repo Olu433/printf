@@ -29,7 +29,7 @@ int print_pointer(va_list types, char buffer[],
 	buffer[BUFF_SIZE - 1] = '\0';
 	UNUSED(precision);
 
-	num_addrs = (unsigned long)addrs;
+	num_addrs = (uintptr_t)addrs;
 
 	while (num_addrs > 0)
 	{
@@ -82,7 +82,7 @@ int print_non_printable(va_list types, char buffer[],
 		if (is_printable(str[i]))
 			buffer[i + offset] = str[i];
 		else
-			offset += append_hexa_code(str[i], buffer, i + offset);
+			offset += _hexa_code(str[i], buffer, i + offset);
 
 		i++;
 	}
